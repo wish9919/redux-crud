@@ -1,19 +1,14 @@
 import React from "react";
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Header from "./components/header/Header";
 import Notes from "./views/Notes";
 import Todos from "./views/Todos";
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <ul>
-        <li>
-          <Link to="/notes">Notes</Link>
-        </li>
-        <li>
-          <Link to="/todos">Todos</Link>
-        </li>
-      </ul>
+      <Header />
+
       <Switch>
         <Route path="/notes" component={Notes} />
         <Route path="/todos" component={Todos} />

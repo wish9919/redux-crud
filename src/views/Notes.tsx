@@ -20,7 +20,7 @@ const Notes: React.FC = () => {
 
   return (
     <div>
-      <h1>Notes</h1>
+      <h1 className="text-4xl">Notes</h1>
       <NoteInput addNote={addNote} />
       <ul>
         {notes.map((note, index) => (
